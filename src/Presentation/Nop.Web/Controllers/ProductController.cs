@@ -293,8 +293,7 @@ namespace Nop.Web.Controllers
             if (model.ReviewTypeList.Count > 0)
                 foreach (var additionalProductReview in model.AddAdditionalProductReviewList)
                 {
-                    if (additionalProductReview.IsRequired)
-                      additionalProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
+                    additionalProductReview.Rating = additionalProductReview.IsRequired ? _catalogSettings.DefaultProductRatingValue : 0;
                 }
 
             return View(model);
@@ -360,7 +359,7 @@ namespace Nop.Web.Controllers
                 {
                     var additionalProductReview = new ProductReviewReviewTypeMapping
                     {
-                        ProductReviewId = productReview.Id,                        
+                        ProductReviewId = productReview.Id,
                         ReviewTypeId = additionalReview.ReviewTypeId,
                         Rating = additionalReview.Rating
                     };
