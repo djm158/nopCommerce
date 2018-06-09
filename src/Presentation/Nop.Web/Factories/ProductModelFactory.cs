@@ -1417,6 +1417,7 @@ namespace Nop.Web.Factories
                     Description = reviewType.GetLocalized(entity => entity.Description),
                     VisibleToAllCustomers = reviewType.VisibleToAllCustomers,
                     DisplayOrder = reviewType.DisplayOrder,
+                    IsRequired = reviewType.IsRequired,
                 });
             }            
 
@@ -1468,6 +1469,7 @@ namespace Nop.Web.Factories
                     Name = reviewType.GetLocalized(entity => entity.Name),
                     Description = reviewType.GetLocalized(entity => entity.Description),
                     DisplayOrder = rt.DisplayOrder,
+                    IsRequired = rt.IsRequired,
                 };
 
                 model.AddAdditionalProductReviewList.Add(reviewTypeMappingModel);

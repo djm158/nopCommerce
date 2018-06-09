@@ -985,7 +985,13 @@ set @resources='
   </LocaleResource>
   <LocaleResource Name="Admin.Settings.ReviewType.Fields.DisplayOrder.Hint">
     <Value>The review type display order. 1 represents the first item in the list.</Value>
-  </LocaleResource>  
+  </LocaleResource> 
+  <LocaleResource Name="Admin.Settings.ReviewType.Fields.IsRequired">
+    <Value>Required</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Settings.ReviewType.Fields.IsRequired.Hint">
+    <Value>When an attribute is required, the customer must choose an appropriate attribute value before they can continue.</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Settings.ReviewType.Fields.Name">
     <Value>Name</Value>
   </LocaleResource>
@@ -2638,6 +2644,7 @@ BEGIN
 	[Description] [nvarchar](max) NOT NULL,
 	[DisplayOrder] [int] NOT NULL,	
 	[VisibleToAllCustomers] [bit] NOT NULL,
+	[IsRequired] [bit] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

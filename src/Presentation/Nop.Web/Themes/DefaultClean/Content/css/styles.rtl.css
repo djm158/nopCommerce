@@ -2419,7 +2419,8 @@ label, label + * {
 }
 lable.tip {
     border-bottom: 1px dashed;
-    text-decoration: none
+    text-decoration: none;
+    color: #444;
 }
 
 lable.tip:hover {
@@ -5331,6 +5332,14 @@ pre {
 	float: none;
 	margin: auto !important;
 }
+.write-review .review-rating {
+   text-align: center;
+}
+.write-review .review-rating div.name-description {
+    width: 100%;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
 
 }
 
@@ -5764,16 +5773,11 @@ pre {
 
 .write-review .review-rating div {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 5px 0 0;
     cursor: default;
     vertical-align: middle;
     font-size: 14px;
     height: 17px;
-}
-
-.write-review .review-rating div.name-description {
-    width: 15%;
-    text-align: right
 }
 
 
@@ -6669,6 +6673,12 @@ pre {
 	max-width: 850px;
 }
 
+.write-review .review-rating div.name-description {
+    width: 265px;
+    margin: 0 10px 0 0;
+    text-align: right
+}
+
 
 /*** WISHLIST & COMPARE LIST ***/
 
@@ -6992,6 +7002,10 @@ pre {
 	max-width: 1050px;
 }
 
+.write-review .review-rating div.name-description {
+    margin: 0 10px 0 0;
+    min-width: 375px;
+}
 
 /*** REGISTRATION, LOGIN, ACCOUNT ***/
 

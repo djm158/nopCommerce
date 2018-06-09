@@ -34,6 +34,9 @@ namespace Nop.Web.Areas.Admin.Models.Catalog
         [NopResourceDisplayName("Admin.Settings.ReviewType.Fields.DisplayOrder")]
         public int DisplayOrder { get; set; }
 
+        [NopResourceDisplayName("Admin.Settings.ReviewType.Fields.IsRequired")]
+        public bool IsRequired { get; set; }
+
         [NopResourceDisplayName("Admin.Settings.ReviewType.Fields.VisibleToAllCustomers")]
         public bool VisibleToAllCustomers { get; set; }
 

@@ -289,11 +289,12 @@ namespace Nop.Web.Controllers
             //default value
             model.AddProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
             
-            //default value for all review types
+            //default value for all additional review types
             if (model.ReviewTypeList.Count > 0)
                 foreach (var additionalProductReview in model.AddAdditionalProductReviewList)
                 {
-                    additionalProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
+                    if (additionalProductReview.IsRequired)
+                      additionalProductReview.Rating = _catalogSettings.DefaultProductRatingValue;
                 }
 
             return View(model);
