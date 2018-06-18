@@ -2435,12 +2435,12 @@ lable.tip p {
 lable.tip:hover p {
     border: #c0c0c0 1px dotted;
     padding: 10px 10px 5px 5px;
-    display: block;
+    display: inline;
     z-index: 100;
     background: #f0f0f0 no-repeat 100% 5%;
     left: 0px;
-    margin: 5px;
-    width: 150px;
+    /*margin: 5px;*/
+    width: auto;
     position: absolute;
     top: 10px;
     text-align: right;

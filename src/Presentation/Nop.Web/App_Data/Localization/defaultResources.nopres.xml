@@ -12958,7 +12958,7 @@
     <Value>Add a new review type</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Settings.ReviewType.BackToList">
-    <Value>back to review type list</Value>
+    <Value>back to сatalog settings</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Settings.ReviewType.Deleted">
     <Value>The review type has been deleted successfully.</Value>

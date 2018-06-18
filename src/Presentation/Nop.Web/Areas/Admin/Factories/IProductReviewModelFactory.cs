@@ -47,17 +47,6 @@ namespace Nop.Web.Areas.Admin.Factories
         ProductReviewReviewTypeMappingListModel PrepareProductReviewReviewTypeMappingListModel(ProductReviewReviewTypeMappingSearchModel searchModel,
             ProductReview productReview);
 
-        /// <summary>
-        /// Prepare product review and review type mapping model
-        /// </summary>
-        /// <param name="model">Product review and review type mapping model</param>
-        /// <param name="productReview">Product review</param>
-        /// <param name="productReviewReviewTypeMapping">Product review and review type mapping</param>
-        /// <param name="excludeProperties">Whether to exclude populating of some properties of model</param>
-        /// <returns>Product review and review type mapping model</returns>
-        ProductReviewReviewTypeMappingModel PrepareProductReviewReviewTypeMappingModel(ProductReviewReviewTypeMappingModel model,
-            ProductReview productReview, ProductReviewReviewTypeMapping productReviewReviewTypeMapping, bool excludeProperties = false);
-
         #endregion
     }
 }

@@ -29,7 +29,6 @@ namespace Nop.Web.Areas.Admin.Controllers
         private readonly IPermissionService _permissionService;
         private readonly IProductReviewModelFactory _productReviewModelFactory;
         private readonly IProductService _productService;
-        private readonly IReviewTypeService _reviewTypeService;
         private readonly IWorkContext _workContext;
         private readonly IWorkflowMessageService _workflowMessageService;
 
@@ -45,8 +44,7 @@ namespace Nop.Web.Areas.Admin.Controllers
             IProductReviewModelFactory productReviewModelFactory,
             IProductService productService,
             IWorkContext workContext,
-            IWorkflowMessageService workflowMessageService,
-            IReviewTypeService reviewTypeService)
+            IWorkflowMessageService workflowMessageService)
         {
             this._catalogSettings = catalogSettings;
             this._customerActivityService = customerActivityService;
@@ -57,7 +55,6 @@ namespace Nop.Web.Areas.Admin.Controllers
             this._productService = productService;
             this._workContext = workContext;
             this._workflowMessageService = workflowMessageService;
-            this._reviewTypeService = reviewTypeService;
         }
 
         #endregion

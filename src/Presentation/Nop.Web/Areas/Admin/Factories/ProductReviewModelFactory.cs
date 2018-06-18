@@ -263,46 +263,7 @@ namespace Nop.Web.Areas.Admin.Factories
             };
 
             return model;
-        }
-
-        /// <summary>
-        /// Prepare product review and review type mapping model
-        /// </summary>
-        /// <param name="model">Product review and review type mapping model</param>
-        /// <param name="productReview">Product review</param>
-        /// <param name="productReviewReviewTypeMapping">Product review and review type mapping</param>
-        /// <param name="excludeProperties">Whether to exclude populating of some properties of model</param>
-        /// <returns>Product review and review type mapping model</returns>
-        public virtual ProductReviewReviewTypeMappingModel PrepareProductReviewReviewTypeMappingModel(ProductReviewReviewTypeMappingModel model, 
-            ProductReview productReview, ProductReviewReviewTypeMapping productReviewReviewTypeMapping, bool excludeProperties = false)
-        {
-            if (productReview == null)
-                throw new ArgumentNullException(nameof(productReview));
-
-            if (productReviewReviewTypeMapping != null)
-            {
-                //fill in model values from the entity
-                model = model ?? new ProductReviewReviewTypeMappingModel
-                {
-                    Id = productReviewReviewTypeMapping.Id
-                };
-
-                var reviewType = _reviewTypeService.GetReviewTypeById(productReviewReviewTypeMapping.ReviewTypeId);
-
-                model.Name = reviewType.GetLocalized(entity => entity.Name);
-                model.Description = reviewType.GetLocalized(entity => entity.Description);
-                model.VisibleToAllCustomers = reviewType.VisibleToAllCustomers;
-
-                if (!excludeProperties)
-                {
-                    model.Rating = productReviewReviewTypeMapping.Rating; 
-                }
-            }
-
-            model.ProductReviewId = productReview.Id;
-
-            return model;
-        }
+        }        
 
         #endregion
     }

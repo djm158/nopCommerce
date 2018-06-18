@@ -34,26 +34,13 @@ namespace Nop.Services.Catalog
         private const string REVIEW_TYPE_PATTERN_KEY = "Nop.reviewType.";
 
         /// <summary>
-        /// Key pattern to clear cache product review and review type mapping
-        /// </summary>
-        private const string PRODUCT_REVIEW_REVIEW_TYPE_MAPPING_PATTERN_KEY = "Nop.productReviewReviewTypeMapping.";
-
-        /// <summary>
         /// Key for caching product review and review type mapping
         /// </summary>
         /// <remarks>
         /// {0} : product review ID
         /// </remarks>
         private const string PRODUCT_REVIEW_REVIEW_TYPE_MAPPING_ALL_KEY = "Nop.productReviewReviewTypeMapping.all-{0}";
-
-        /// <summary>
-        /// Key for caching product review and review type mapping
-        /// </summary>
-        /// <remarks>
-        /// {0} : product review review type mapping ID
-        /// </remarks>
-        private const string PRODUCT_REVIEW_REVIEW_TYPE_MAPPING_BY_ID_KEY = "Nop.productattributemapping.id-{0}";
-
+                
         #endregion
 
         #region Fields
